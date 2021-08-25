@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1097272713186",
+    "project_id": "hsvp-survey",
+    "storage_bucket": "hsvp-survey.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097272713186:android:ded1bc687803b3e24363bb",
+        "android_client_info": {
+          "package_name": "hsvp.survey.hry.pkl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097272713186-qp1vvop65vq228ivg1sjghng4vslof88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH_u-ntGo-mbkZYLvqnbOGrqx2CQjxUA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097272713186-qp1vvop65vq228ivg1sjghng4vslof88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

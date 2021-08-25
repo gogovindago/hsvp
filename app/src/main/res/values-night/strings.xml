@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <string name="app_name">Hsvp Survey</string>
+    <string name="name">Hsvp Survey Haryana</string>
+    <string name="department_of_higher_education_haryana_the_officialapp" translatable="false"> Haryana Shehri Vikas Pradhikaran, Haryana \n<u> the official App </u></string>
+    <string name="department_of_higher_education_haryana" translatable="false"> Haryana Shehri Vikas Pradhikaran, Haryana</string>
+    <string name="the_official_app"><u>the official App</u></string>
+
+
+    <string name="action_okay">Ok</string>
+    <string name="reg_Mobile">Registered Mobile Number</string>
+    <string name="home">Home</string>
+    <string name="send">Send</string>
+    <string name="skip"><u> Skip </u></string>
+    <string name="other_digital_libraries"><font color='black'> Other</font> Digital Libraries</string>
+    <string name="digitsoptmsg">We have sent a 4 digits Otp on your Registered mobile which last four digits is.</string>
+
+    <string name="profile">Profile</string>
+
+<!--    <string name="trending_ebooks"><font color='black'> Trending </font> eBooks</string>-->
+<!--    <string name="trending_journals"><font color='black'> Trending </font> Journals</string>-->
+<!--    <string name="trending_videos"><font color='black'> Trending </font> Videos</string>-->
+<!--
+    <string name="Udaan_videos"><font color='black'> Trending </font> Udaan Career counseling</string>
+-->
+
+    <string name="already_existing_account_sign_in"><u> ALREADY EXISTING ACCOUNT ! SIGN IN </u></string>
+    <string name="login_signup"><u> Login \n/\n Signup </u></string>
+    <string name="about"><u> About </u></string>
+    <string name="click_here_to_change_adopted_person_detail"><u>Click here to change Adopted Person Detail.</u></string>
+    <string name="tagline">To provide every allottee/purchaser of its properties of haryana.</string></resources>

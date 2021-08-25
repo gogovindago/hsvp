@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hsvp.survey.hry.pkl">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="hsvp.survey.hry.pkl.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.sauhardam"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name="hsvp.survey.hry.pkl.ui.activity.NssGalleryActivity"
+            android:theme="@style/sauhardam"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" ></activity>
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.SchemeChangeForStudentActivity"
+            android:theme="@style/sauhardam"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.StudentVerificationListActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.adminDashboardActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.NodalSchemTypeListActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.ModificationInAdoptedPersonDetailActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.ViewSelfDailyReportByStudentActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.StudentDailyActivityDetailActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.StudentRecordActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.OldAgeDailyActivitiesActivity"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.OldAgeTakeCareStep1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.RegistrationNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service
+            android:name="hsvp.survey.hry.pkl.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.welcome.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppFullScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.NotificationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.NotificationDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.AdoptionOfLibStep1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.AdoptionDailyActivitiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.RuralOldAgedDailyActivitiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.RuralOldAgedStep1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.StudentDailyActivityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.NodalSchemeTypeListForVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.StudentVerifiedListForNodalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.SchemeChangeRequestListForNodalOfficerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="hsvp.survey.hry.pkl.ui.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+    </application>
+
+</manifest>

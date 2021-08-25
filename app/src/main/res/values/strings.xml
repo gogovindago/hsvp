@@ -1,0 +1,74 @@
+<resources>
+    <!--
+    <string name="app_name">Old Age \n&amp;\nOrphanage Homes\n</string>
+-->
+    <string name="app_name">Hsvp Survey</string>
+    <string name="name">Hsvp Survey Haryana</string>
+    <string name="department_of_higher_education_haryana_the_officialapp" translatable="false"> Haryana Shehri Vikas Pradhikaran, Haryana \n<u> the official App </u></string>
+    <string name="department_of_higher_education_haryana" translatable="false"> Haryana Shehri Vikas Pradhikaran, Haryana</string>
+    <string name="the_official_app"><u>the official App</u></string>
+    <string name="Login">Login</string>
+    <string name="create_Account">Create Account</string>
+    <string name="action_okay">Ok</string>
+    <string name="selectlanguage" translatable="false">Select Your Language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="login">Login</string>
+    <string name="user_id">User Id</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_passwordd">Forgot Password ?</string>
+    <string name="reg_Mobile">Registered Mobile Number</string>
+    <string name="home">Home</string>
+    <string name="send">Send</string>
+    <string name="profile">Profile</string>
+    <string name="cm"><b>Shri Manohar Lal</b>\nHon’ble Chief Minister</string>
+    <string name="edm"><b>Shri Kanwar Pal</b>\nHon’ble Education Minister</string>
+    <!--    <string name="ps"><b>Shri Ankur Gupta, IAS</b>\nPrincipal Secretary Higher Education, Haryana</string>-->
+    <!--    <string name="dg"><b>Shri Ajit Balaji Joshi, IAS</b>\nDirector General Higher Education, Haryana</string>-->
+    <string name="ps"><b>Shri Ankur Gupta, IAS</b>\nPSHE, Haryana</string>
+    <string name="psnow"><b>Shri. Anand Mohan Sharan, IAS</b>\nPSHE, Haryana</string>
+    <string name="dg"><b>Shri Ajit Balaji Joshi, IAS</b>\nDGHE, Haryana</string>
+
+    <string name="dgnow"><b>Shri Vijay Singh Dahiya, IAS</b>\nDGHE, Haryana</string>
+
+
+    <string name="studentreportcard">Student\n Report Card</string>
+    <string name="studentverification">Student\n Verification</string>
+    <string name="studentverified"> Verified\n Student</string>
+    <string name="studentschemechange"> Scheme Change\n Request</string>
+
+    <string name="reportcard"> Report Card</string>
+    <string name="txt_slct_optionn">Option</string>
+    <string name="txt_gelleryy">Gallery</string>
+    <string name="txt_warningg">Cancel</string>
+    <string name="txt_camerayy">Camera</string>
+    <string name="txt_slct_option">Option</string>
+    <string name="planfirst">Taking Care of old Age or Orphans</string>
+    <string name="plansecond">Adoption of Lib Old Age or Orphans</string>
+    <string name="planthrd">Taking Care of Rural  old Age or Orphans</string>
+    <string name="viewdailyactivitybystudent">My Daily Activity List</string>
+    <string name="create_account"><u>Create Account</u></string>
+    <string name="skip"><u> Skip </u></string>
+    <string name="digitsoptmsg">We have sent a 4 digits Otp on your Registered mobile which last four digits is.</string>
+    <string name="other_digital_libraries"><font color='black'> Other</font> Digital Libraries</string>
+    <string name="make_sure_reloading_page">Make sure you have good internet in your Mobile.Reload page again.</string>
+    <string name="oops_there_is_no_interenet">Oops!! There is no internet connection. Please enable your internet connection.</string>
+
+    <!--
+    <string name="Udaan_videos"><font color='black'> Trending </font> Udaan Career counseling</string>
+-->
+    <string name="please_read_all_filled_data_carefully_before_apply"><u> Please read all filled data carefully before apply. </u></string>
+    <string name="verify_all_details_of_basic_before_submission"><u> Verify all Details before submission. </u></string>
+
+    <string name="already_existing_account_sign_in"><u> ALREADY EXISTING ACCOUNT ! SIGN IN </u></string>
+    <string name="login_signup"><u> Login \n/\n Signup </u></string>
+    <string name="about"> About </string>
+    <string name="click_here_to_change_adopted_person_detail"><u>Click here to change Adopted Person Detail.</u></string>
+
+    <string name="your_password">Your password</string>
+    <string name="your_new_password">Your new password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="tagline">To provide every allottee/purchaser of its properties of haryana.</string>
+
+</resources>

@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_overlay"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/userreg_rowbg"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/person">
+
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/takePhoto"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="end|bottom"
+                        android:src="@drawable/ic_baseline_photo_camera_24"
+                        android:visibility="gone">
+
+                    </ImageView>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+
+                    android:id="@+id/txtschemeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+
+                    android:gravity="center|top"
+                    android:text="Taking Care of Old Age And Orphan Age People"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    tools:targetApi="lollipop" />
+
+                <!--principal_Status : "Pending"
+principal_StatusDate : null
+branch_Status : "Pending"
+branch_StatusDate : null
+dD_Status : "Pending"
+dD_StatusDate : null
+dhE_Status : null
+dhE_StatusDate : null
+fC_Status : "Pending"
+fC_StatusDate : null
+applicationId : "77"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtstudentId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:drawablePadding="5dp"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="Student Id "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:background="@drawable/bg_overlay"
+
+                        android:id="@+id/txtstudentvalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:drawablePadding="5dp"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="Mobile number"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txtMobilevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtemail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+
+                        android:drawablePadding="5dp"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="Email Id"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txtemailvalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtStudentname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:drawablePadding="5dp"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="Student Name"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txtStudentnamevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtDistrict"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:drawablePadding="5dp"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="District"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txtDistrictvalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCollege"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="College "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txtCollegevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCourse"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:drawablePadding="5dp"
+                        android:gravity="center|start"
+                        android:padding="5dp"
+                        android:text="Course "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/txtCoursevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAllCaps="true"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        tools:targetApi="lollipop" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/txtSemester"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:gravity="center|start"
+                        android:padding="8dp"
+                        android:text="Semester "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/txtSemestervalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/bg_overlay"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textstartDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:padding="8dp"
+                        android:text="Leave Start Date "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/textstartDatevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        tools:targetApi="lollipop" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textEndDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:padding="8dp"
+                        android:text="Leave End Date "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textEndDatevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textSubject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:padding="8dp"
+                        android:text="Child DOB  "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtchildDobvalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textChildName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:padding="8dp"
+                        android:text="Child Name  "
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textChildNamevalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAllCaps="true"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+
+                        android:id="@+id/textclass"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:padding="8dp"
+                        android:text="Total nos. of leave Applied"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+
+                    <TextView
+
+                        android:id="@+id/textclassvalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/spinner_border"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:text="N/A"
+                        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|start"
+                    android:background="@drawable/spinner_border"
+                    android:drawableStart="@drawable/ic_baseline_picture_as_pdf_24white"
+                    android:drawableLeft="@drawable/ic_baseline_picture_as_pdf_24white"
+                    android:gravity="center|start"
+                    android:text=" View all Documents which applicant has attached at leave applied time. "
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+
+                        android:id="@+id/txtsanctionOrderpdf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/spinner_border"
+                        android:drawableBottom="@drawable/ic_baseline_picture_as_pdf_24white"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text=" view Sanction Order doc"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textchildagepdfurl"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|start"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/spinner_border"
+                        android:drawableBottom="@drawable/ic_baseline_picture_as_pdf_24white"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text=" View Child Age Proof doc"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtAffidavitypdf"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/spinner_border"
+                        android:drawableBottom="@drawable/ic_baseline_picture_as_pdf_24white"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="View Affidavit/UnderTaking doc"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnviewActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edtborderblue"
+                    android:elevation="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:text="View Activity List"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="normal"
+                    android:visibility="visible"
+                    tools:targetApi="lollipop" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

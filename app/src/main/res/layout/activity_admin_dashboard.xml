@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.adminDashboardActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/simpleSwipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                    app:layout_constraintVertical_bias="0.0">
+
+
+                    <com.google.android.material.card.MaterialCardView
+
+                        android:id="@+id/cardsforadoptedpersondetailrural"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        card_view:cardBackgroundColor="@color/white"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardMaxElevation="10dp"
+                        card_view:contentPadding="0dp"
+                        card_view:strokeColor="@color/colorAccent"
+                        card_view:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edtbgwhite"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:text="---- Total Student Detail -----"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                app:textAllCaps="false" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/white">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edttotalStudent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:clickable="false"
+                                        android:drawablePadding="16dp"
+                                        android:editable="true"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:hint=""
+                                        android:inputType="textPersonName"
+                                        android:text="000000"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardsVerified"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/green"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/green"
+                                    android:gravity="center"
+                                    android:text=" Verified Students "
+                                    android:textAllCaps="false"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        app:boxBackgroundMode="none"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotalveryfied"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:background="@null"
+
+                                            android:clickable="false"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            android:inputType="textPersonName"
+                                            android:text="000000"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textColor="@color/green"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardsunverified"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.5"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=" UnVerified Students "
+                                    android:textAllCaps="false"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                    android:background="#ff0000"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotalunveryfied"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:clickable="false"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:gravity="center"
+                                            android:inputType="textPersonName"
+                                            android:text="0000000"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+
+                                            android:textColor="#ff0000"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardstakeCareStudnet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight=".33"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text=" Take Care Student "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotaltakeCareStudnet"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:clickable="false"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:inputType="textPersonName"
+                                            android:text="0000000"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardsadoptionLibraryStudent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginLeft="6dp"
+
+                            android:layout_weight=".33"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text=" Adoption Student "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimaryDark"                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotaladoptionLibraryStudent"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:clickable="false"
+                                            android:drawablePadding="5dp"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            android:inputType="textPersonName"
+                                            android:text="0000000"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+
+                            android:id="@+id/cardstakeCareRuralStudent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight=".33"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text=" Rural Area Student "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimaryDark"                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotaltakeCareRuralStudent"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:clickable="false"
+                                            android:drawablePadding="5dp"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            android:inputType="textPersonName"
+                                            android:text="00000000"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text=" ............Student Activities Schemewise......... "
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:textAllCaps="false" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:padding="2dp"
+                        android:weightSum="1">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardstakeCareTotalActivity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginLeft="3dp"
+
+                            android:layout_weight="0.33"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text=" Take care Activity "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotaltakeCareTotalActivity"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:clickable="false"
+                                            android:drawablePadding="5dp"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:inputType="textPersonName"
+                                            android:text="0000000"
+android:textColor="@color/black"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardsadoptionLibraryTotalActivity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight=".33"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text=" Adoption Activity "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotaladoptionLibraryTotalActivity"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:clickable="false"
+                                            android:drawablePadding="5dp"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            android:inputType="textPersonName"
+                                            android:text="00000000"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardstakeCareruralTotalActivity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight=".33"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="10dp"
+                            card_view:cardMaxElevation="10dp"
+                            card_view:contentPadding="0dp"
+                            card_view:strokeColor="@color/colorAccent"
+                            card_view:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edtbgwhite"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text=" Rural Area Activity"
+                                    android:textAllCaps="false"
+
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"
+                                    app:textAllCaps="false" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="1dp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundMode="none"
+                                        android:background="@null"
+                                        android:gravity="center">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edttotaltakeCareRuralTotalActivity"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:clickable="false"
+                                            android:drawablePadding="5dp"
+                                            android:editable="true"
+                                            android:enabled="false"
+                                            android:gravity="center"
+                                            android:inputType="textPersonName"
+                                            android:text="00000000"
+                                            app:boxBackgroundMode="none"
+                                            android:background="@null"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</layout>
