@@ -91,6 +91,7 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:visibility="invisible"
                 android:id="@+id/btnsignup"
                 android:layout_width="200dp"
                 android:layout_height="55dp"
