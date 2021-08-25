@@ -312,12 +312,12 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
 
             if (CSPreferences.readString(this, "oldAgeAdoptionOfLibrary").equalsIgnoreCase("true")) {
 
-                arrayList.add(new OptionDataModel(R.string.plansecond, R.drawable.ic_adoption, 3, "#FFFFFF"));
+                arrayList.add(new OptionDataModel(R.string.planfirst, R.drawable.ic_adoption, 3, "#FFFFFF"));
             }
 
             if (CSPreferences.readString(this, "oldAgePeopleInRuralArea").equalsIgnoreCase("true")) {
 
-                arrayList.add(new OptionDataModel(R.string.planthrd, R.drawable.ic_cane, 4, "#FFFFFF"));
+                arrayList.add(new OptionDataModel(R.string.planfirst, R.drawable.ic_cane, 4, "#FFFFFF"));
             }
             //  arrayList.add(new OptionDataModel(R.string.viewdailyactivitybystudent, R.drawable.profile, 44, "#FFFFFF"));
 
@@ -357,8 +357,8 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
             DataModelLeftNew mydailyactivity = new DataModelLeftNew(R.drawable.ic_baseline_local_activity_24, "My Daily Activity", 44);
             dataModelLeftList.add(mydailyactivity);
 
-            DataModelLeftNew changescheme = new DataModelLeftNew(R.drawable.ic_baseline_swap_horiz_24, "Change Scheme Request", 444);
-            dataModelLeftList.add(changescheme);
+//            DataModelLeftNew changescheme = new DataModelLeftNew(R.drawable.ic_baseline_swap_horiz_24, "Change Scheme Request", 444);
+//            dataModelLeftList.add(changescheme);
         }
         DataModelLeftNew myprofile = new DataModelLeftNew(R.drawable.personwhite, "My Profile", 55);
         dataModelLeftList.add(myprofile);
@@ -370,8 +370,8 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
         DataModelLeftNew MyNotification = new DataModelLeftNew(R.drawable.notifications, "My Notification", 0);
         dataModelLeftList.add(MyNotification);
 
-        DataModelLeftNew nssgallery = new DataModelLeftNew(R.drawable.ic_baseline_photo_album_24, "NSS Gallery", 101);
-        dataModelLeftList.add(nssgallery);
+//        DataModelLeftNew nssgallery = new DataModelLeftNew(R.drawable.ic_baseline_photo_album_24, "NSS Gallery", 101);
+//        dataModelLeftList.add(nssgallery);
 
         DataModelLeftNew RateApp = new DataModelLeftNew(R.drawable.rate_review, "Rate App", 1);
         dataModelLeftList.add(RateApp);

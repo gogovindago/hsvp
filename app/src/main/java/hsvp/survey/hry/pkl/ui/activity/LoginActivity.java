@@ -193,11 +193,25 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
 
                 if (GlobalClass.isNetworkConnected(LoginActivity.this)) {
+                    CSPreferences.putString(this, "User_Name", "Test");
+                    CSPreferences.putString(this, "PhoneNo", "8269970959");
+                    CSPreferences.putString(this, "Email", "Test@gmail.com");
+                    CSPreferences.putString(this, "token", "32132132132121");
+                    CSPreferences.putString(this, "role", "3");
 
+                    CSPreferences.putString(this, "oldAgeTakingCare", "true");
+                    CSPreferences.putString(this, "oldAgeAdoptionOfLibrary","true");
+                    CSPreferences.putString(this, "oldAgePeopleInRuralArea","true");
+
+
+
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                     WebAPiCall webapiCall = new WebAPiCall();
                     //  webapiCall.loginPostDataMethod(this, this, LoginActivity.this, edtmobile.getText().toString().trim(), edtpass.getText().toString().trim(), refreshedToken);
                     // webapiCall.loginPostDataMethod(this, this, LoginActivity.this, loginRequest);
-                    webapiCall.loginPostDataMethod(this, this, LoginActivity.this, loginRequest);
+                //    webapiCall.loginPostDataMethod(this, this, LoginActivity.this, loginRequest);
 
 
                 } else {
@@ -278,7 +292,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     public void Loginuserdata(LoginResponse.Data data) {
         try {
 
-            CSPreferences.putString(this, "User_Name", data.getFirstName());
+            CSPreferences.putString(this, "User_Name", "Test");
             //   CSPreferences.putString(this, "Purpose", data.getPurpose());
             //    CSPreferences.putString(this, "Status", data.getStatus());
             //   CSPreferences.putString(this, "LibraryId", String.valueOf(data.getLibraryId()));
@@ -289,10 +303,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
 
 
-            CSPreferences.putString(this, "PhoneNo", data.getMobile());
-            CSPreferences.putString(this, "Email", data.getEmail());
-            CSPreferences.putString(this, "token", data.getMobile());
-            CSPreferences.putString(this, "role", data.getAccountType());
+            CSPreferences.putString(this, "PhoneNo", "8269970959");
+            CSPreferences.putString(this, "Email", "Test@gmail.com");
+            CSPreferences.putString(this, "token", "32132132132121");
+            CSPreferences.putString(this, "role", "Admin");
            // CSPreferences.putString(this, "role", "4");
             CSPreferences.putString(this, "token", data.getToken());
             CSPreferences.putString(this, "CollegeId", data.getCollegeId());
