@@ -353,12 +353,14 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
 
 //        adminimagelist.add(new OptionDataModel(R.string.viewdailyactivitybystudent, R.drawable.profile, 44, "#FFFFFF"));
 //        adminimagelist.add(new OptionDataModel(R.string.profile, R.drawable.profile, 1, "#FFFFFF"));
+
         if (CSPreferences.readString(this, "role").equalsIgnoreCase("3")) {
             DataModelLeftNew mydailyactivity = new DataModelLeftNew(R.drawable.ic_baseline_local_activity_24, "My Daily Activity", 44);
             dataModelLeftList.add(mydailyactivity);
 
 //            DataModelLeftNew changescheme = new DataModelLeftNew(R.drawable.ic_baseline_swap_horiz_24, "Change Scheme Request", 444);
 //            dataModelLeftList.add(changescheme);
+
         }
         DataModelLeftNew myprofile = new DataModelLeftNew(R.drawable.personwhite, "My Profile", 55);
         dataModelLeftList.add(myprofile);

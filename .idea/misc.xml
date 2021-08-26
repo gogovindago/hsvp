@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_adoption_of_lib_step1.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_modification_in_adopted_person_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_old_age_take_care_step1.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_registration_new.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/layout/activity_welcome.xml" value="0.30833333333333335" />
         <entry key="..\:/AndroidApps/Govind/2020/AllApps/Java/Demo/HSVP/HSVP SURVEY/HSVP SURVEY/hsvp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
@@ -16,5 +20,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressKotlinCodeStyleNotification">
+    <option name="disableForAll" value="true" />
   </component>
 </project>
