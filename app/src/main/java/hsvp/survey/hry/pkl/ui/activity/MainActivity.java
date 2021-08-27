@@ -727,33 +727,11 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
         } else*/
         if (item.Id == 2) {
 
-            /*
-            CSPreferences.putString(this, "TakeCareStep1", data.getTakeCareStep1());
-            CSPreferences.putString(this, "LibrariesAdoptionStep1", data.getLibrariesAdoptionStep1());
-            CSPreferences.putString(this, "RuralTakeCareStep1", data.getRuralTakeCareStep1());
-*/
-            if (CSPreferences.readString(this, "role").equalsIgnoreCase("1") || (CSPreferences.readString(this, "role").equalsIgnoreCase("2"))) {
-                // Intent intent = new Intent(this, StudentRecordActivity.class);
-                Intent intent = new Intent(this, NodalSchemTypeListActivity.class);
-                startActivity(intent);
 
-            } else {
-
-
-                if (CSPreferences.readString(this, "TakeCareStep1").equalsIgnoreCase("N")) {
-                    Intent intent = new Intent(this, OldAgeTakeCareStep1Activity.class);
-                    intent.putExtra("schemeId", "1");
-
+                    Intent intent = new Intent(this, SurveyActivity.class);//OldAgeTakeCareStep1Activity  OldAgeDailyActivitiesActivity
                     startActivity(intent);
 
-                } else {
 
-
-                    Intent intent = new Intent(this, OldAgeTakeCareStep1Activity.class);//OldAgeTakeCareStep1Activity  OldAgeDailyActivitiesActivity
-                    intent.putExtra("schemeId", "1");
-                    startActivity(intent);
-                }
-            }
 
         } else if (item.Id == 3) {
 
