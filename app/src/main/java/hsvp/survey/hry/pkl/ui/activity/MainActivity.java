@@ -307,10 +307,10 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
 
             if (CSPreferences.readString(this, "oldAgeTakingCare").equalsIgnoreCase("true")) {
 
-                arrayList.add(new OptionDataModel(R.string.planfirst, R.drawable.ic_cane, 2, "#FFFFFF"));
+                arrayList.add(new OptionDataModel(R.string.planfirst, R.drawable.ic_baseline_fact_check_24, 2, "#FFFFFF"));
             }
 
-            if (CSPreferences.readString(this, "oldAgeAdoptionOfLibrary").equalsIgnoreCase("true")) {
+          /*  if (CSPreferences.readString(this, "oldAgeAdoptionOfLibrary").equalsIgnoreCase("true")) {
 
                 arrayList.add(new OptionDataModel(R.string.planfirst, R.drawable.ic_adoption, 3, "#FFFFFF"));
             }
@@ -318,7 +318,7 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
             if (CSPreferences.readString(this, "oldAgePeopleInRuralArea").equalsIgnoreCase("true")) {
 
                 arrayList.add(new OptionDataModel(R.string.planfirst, R.drawable.ic_cane, 4, "#FFFFFF"));
-            }
+            }*/
             //  arrayList.add(new OptionDataModel(R.string.viewdailyactivitybystudent, R.drawable.profile, 44, "#FFFFFF"));
 
             //arrayList.add(new OptionDataModel(R.string.app_name, R.mipmap.ic_launcher, 3, "#FFFFFF"));
