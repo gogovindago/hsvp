@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,821 +16,808 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
-            android:layout_gravity="center"
-            android:fillViewport="true"
-            android:layout_margin="8dp"
-            android:id="@+id/scroll"
+
+
+        <LinearLayout
+
+            android:id="@+id/llurbanEstate"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
 
+            <TextView
+                android:id="@+id/txturbanEstate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Urban Estate"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
 
             <LinearLayout
-
-                android:id="@+id/llurbanEstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbar">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
 
-                <TextView
-                    android:id="@+id/txturbanEstate"
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnUrbanEstate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Urban Estate"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
                     android:visibility="visible">
 
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
-
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnUrbanEstate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
-
-                    </androidx.appcompat.widget.AppCompatSpinner>
-                </LinearLayout>
+                </androidx.appcompat.widget.AppCompatSpinner>
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/llSector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llurbanEstate">
+
+            <TextView
+                android:id="@+id/txtSector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Sector"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
 
             <LinearLayout
-
-                android:id="@+id/llSector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llurbanEstate">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
 
-                <TextView
-                    android:id="@+id/txtSector"
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnSector"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Sector"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
                     android:visibility="visible">
 
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
-
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnSector"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
-
-                    </androidx.appcompat.widget.AppCompatSpinner>
-                </LinearLayout>
+                </androidx.appcompat.widget.AppCompatSpinner>
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/llPropertyCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llSector">
+
+            <TextView
+                android:id="@+id/txtPropertyCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Property Category"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
 
             <LinearLayout
-
-                android:id="@+id/llPropertyCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llSector">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
 
-                <TextView
-                    android:id="@+id/txtPropertyCategory"
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnPropertyCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Property Category"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
                     android:visibility="visible">
 
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
-
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnPropertyCategory"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
-
-                    </androidx.appcompat.widget.AppCompatSpinner>
-                </LinearLayout>
+                </androidx.appcompat.widget.AppCompatSpinner>
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/llPlanningStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llPropertyCategory">
+
+            <TextView
+                android:id="@+id/txtPlanningStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Planning Status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
 
             <LinearLayout
-
-                android:id="@+id/llPlanningStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llPropertyCategory">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
 
-                <TextView
-                    android:id="@+id/txtPlanningStatus"
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnPlanningStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Planning Status"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
                     android:visibility="visible">
 
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
-
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnPlanningStatus"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
-
-                    </androidx.appcompat.widget.AppCompatSpinner>
-                </LinearLayout>
+                </androidx.appcompat.widget.AppCompatSpinner>
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/llPlotOrPropertyNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llPlanningStatus">
+
+            <TextView
+                android:id="@+id/txtPlotOrPropertyNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Plot / PropertyNo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
 
             <LinearLayout
-
-                android:id="@+id/llPlotOrPropertyNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llPlanningStatus">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
 
-                <TextView
-                    android:id="@+id/txtPlotOrPropertyNo"
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnPlotOrPropertyNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Plot / PropertyNo"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
                     android:visibility="visible">
 
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
-
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnPlotOrPropertyNo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
-
-                    </androidx.appcompat.widget.AppCompatSpinner>
-                </LinearLayout>
+                </androidx.appcompat.widget.AppCompatSpinner>
             </LinearLayout>
+        </LinearLayout>
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardsforplotdetailed"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardsforplotdetailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardMaxElevation="8dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@+id/llPlotOrPropertyNo">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/colorPrimary"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                app:cardMaxElevation="8dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintTop_toBottomOf="@+id/llPlotOrPropertyNo">
+                android:background="@drawable/edtbgwhite"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="---- Plot/property number Detail -----"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:textAllCaps="false" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edtbgwhite"
-                    android:orientation="vertical">
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center"
-                        android:text="---- Plot/property number Detail -----"
-                        android:textAllCaps="false"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:visibility="visible"
-                        app:textAllCaps="false" />
+                        android:layout_margin="@dimen/activity_horizontal_marginn"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0.5">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/activity_horizontal_marginn"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.5">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/PlotNo"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:clickable="false"
-                                android:drawableStart="@drawable/age"
-                                android:drawableLeft="@drawable/age"
-                                android:drawablePadding="16dp"
-                                android:editable="true"
-                                android:enabled="false"
-                                android:hint="Plot No."
-                                android:imeOptions="actionNext"
-                                android:inputType="textPersonName"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView7"
-                                tools:ignore="TooDeepLayout" />
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/activity_horizontal_marginn"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.5">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edtSubcategory"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:clickable="false"
-                                android:digits="0123456789"
-                                android:drawableStart="@drawable/appcolorlibrary_books_24"
-                                android:drawableLeft="@drawable/phone"
-                                android:drawablePadding="16dp"
-                                android:editable="true"
-                                android:enabled="false"
-
-                                android:hint="Sub Category"
-                                android:imeOptions="actionNext"
-                                android:inputType="phone"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/activity_horizontal_marginn"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.5">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edtPlotArea"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:clickable="false"
-                                android:digits="0123456789"
-                                android:drawableStart="@drawable/age"
-                                android:drawableLeft="@drawable/age"
-                                android:drawablePadding="16dp"
-                                android:editable="true"
-                                android:enabled="false"
-                                android:hint="Plot Area"
-                                android:imeOptions="actionNext"
-                                android:inputType="textPhonetic"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/activity_horizontal_marginn"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.5">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edtOwnerName"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:clickable="false"
-                                android:drawableStart="@drawable/person"
-                                android:drawableLeft="@drawable/person"
-                                android:drawablePadding="16dp"
-                                android:editable="true"
-                                android:enabled="false"
-                                android:hint="Owner Name"
-                                android:imeOptions="actionNext"
-                                android:inputType="textPersonName"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/PlotNo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/activity_horizontal_marginn"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="0.5">
+                            android:clickable="false"
+                            android:drawableStart="@drawable/age"
+                            android:drawableLeft="@drawable/age"
+                            android:drawablePadding="16dp"
+                            android:editable="true"
+                            android:enabled="false"
+                            android:hint="Plot No."
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7"
+                            tools:ignore="TooDeepLayout" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edtPlotStatus"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:clickable="false"
-                                android:drawableStart="@drawable/ic_baseline_pending_actions_24"
-                                android:drawableLeft="@drawable/health"
-                                android:drawablePadding="16dp"
-                                android:editable="true"
-                                android:enabled="false"
-                                android:hint="Plot Status"
-                                android:imeOptions="actionNext"
-                                android:inputType="textPersonName"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_horizontal_marginn"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0.5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtSubcategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:digits="0123456789"
+                            android:drawableStart="@drawable/appcolorlibrary_books_24"
+                            android:drawableLeft="@drawable/phone"
+                            android:drawablePadding="16dp"
+                            android:editable="true"
+                            android:enabled="false"
+
+                            android:hint="Sub Category"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-
-            <LinearLayout
-
-                android:id="@+id/llconstructedOrnot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardsforplotdetailed">
-
-                <TextView
-                    android:id="@+id/txtconstructedOrnot"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Constructed / Non Constructed"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:visibility="visible">
-
-                </TextView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnconstructedOrnot"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
+                        android:layout_margin="@dimen/activity_horizontal_marginn"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0.5">
 
-                    </androidx.appcompat.widget.AppCompatSpinner>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPlotArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:digits="0123456789"
+                            android:drawableStart="@drawable/age"
+                            android:drawableLeft="@drawable/age"
+                            android:drawablePadding="16dp"
+                            android:editable="true"
+                            android:enabled="false"
+                            android:hint="Plot Area"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPhonetic"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_horizontal_marginn"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0.5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtOwnerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/person"
+                            android:drawableLeft="@drawable/person"
+                            android:drawablePadding="16dp"
+                            android:editable="true"
+                            android:enabled="false"
+                            android:hint="Owner Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
-            </LinearLayout>
-
-
-            <LinearLayout
-
-                android:id="@+id/llLocationType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llconstructedOrnot">
-
-                <TextView
-                    android:id="@+id/txtLocationType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Location Type"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:visibility="visible">
-
-                </TextView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/spinner_border">
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spnLocationType"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:foregroundTint="@color/black"
-                        android:visibility="visible">
+                        android:layout_margin="@dimen/activity_horizontal_marginn"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0.5">
 
-                    </androidx.appcompat.widget.AppCompatSpinner>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPlotStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/ic_baseline_pending_actions_24"
+                            android:drawableLeft="@drawable/health"
+                            android:drawablePadding="16dp"
+                            android:editable="true"
+                            android:enabled="false"
+                            android:hint="Plot Status"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
             </LinearLayout>
 
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+
+            android:id="@+id/llconstructedOrnot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardsforplotdetailed">
+
+            <TextView
+                android:id="@+id/txtconstructedOrnot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Constructed / Non Constructed"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
+
             <LinearLayout
-                android:id="@+id/lleverapplicable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
+
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnconstructedOrnot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
+                    android:visibility="visible">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:id="@+id/llLocationType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llconstructedOrnot">
+
+            <TextView
+                android:id="@+id/txtLocationType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Location Type"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:visibility="visible">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/spinner_border">
+
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnLocationType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:foregroundTint="@color/black"
+                    android:visibility="visible">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lleverapplicable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/spinner_border"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llLocationType">
+
+            <TextView
+                android:id="@+id/txteverapplicable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:background="@drawable/spinner_border"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llLocationType">
+                android:layout_marginBottom="5dp"
+                android:text="Select Which ever applicable Type"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="visible">
 
-                <TextView
-                    android:id="@+id/txteverapplicable"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Select Which ever applicable Type"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:visibility="visible">
+            </TextView>
 
-                </TextView>
-
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/chkIncidentalOpenSpace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Incidental Open Space"
-                    android:textAllCaps="false"
-                    android:textSize="15sp"
-                    android:textStyle="normal"
-                    android:visibility="visible">
-
-                </androidx.appcompat.widget.AppCompatCheckBox>
-
-
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/chkNonNuisanceCharges"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginTop="2dp"
-                    android:text="Non-Nuisance Charges"
-                    android:textAllCaps="false"
-                    android:textSize="15sp"
-                    android:textStyle="normal"
-                    android:visibility="visible">
-
-                </androidx.appcompat.widget.AppCompatCheckBox>
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tileverapplicable"
-
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkIncidentalOpenSpace"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_horizontal_marginn"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/lleverapplicable">
+                android:text="Incidental Open Space"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:visibility="visible">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtAnyOtherRemarks"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:digits="0123456789"
-                    android:drawableStart="@drawable/editpencolor"
-                    android:drawablePadding="16dp"
-                    android:editable="true"
-                    android:enabled="true"
-                    android:hint="Any Other Remarks"
-                    android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+            </androidx.appcompat.widget.AppCompatCheckBox>
 
-            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilLeftSide"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkNonNuisanceCharges"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_horizontal_marginn"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tileverapplicable">
+                android:layout_margin="0dp"
+                android:layout_marginTop="2dp"
+                android:text="Non-Nuisance Charges"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:visibility="visible">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtLeftSide"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:digits="0123456789"
-                    android:drawableStart="@drawable/editpencolor"
-                    android:drawablePadding="16dp"
-                    android:editable="true"
-                    android:enabled="true"
-                    android:hint="Planning in Left Side"
-                    android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+            </androidx.appcompat.widget.AppCompatCheckBox>
+        </LinearLayout>
 
-            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tileverapplicable"
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilRightSide"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_horizontal_marginn"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tilLeftSide">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_marginn"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lleverapplicable">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtRightSide"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:digits="0123456789"
-                    android:drawableStart="@drawable/editpencolor"
-                    android:drawablePadding="16dp"
-                    android:editable="true"
-                    android:enabled="true"
-                    android:hint="Planning in Right Side"
-                    android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilPlanningInfrontSide"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_horizontal_marginn"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tilRightSide">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtPlanningInfrontSide"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:digits="0123456789"
-                    android:drawableStart="@drawable/editpencolor"
-                    android:drawablePadding="16dp"
-                    android:editable="true"
-                    android:enabled="true"
-                    android:hint="Planning In front Side"
-                    android:imeOptions="actionNext"
-                    android:inputType="phone"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_save"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAnyOtherRemarks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/edtbg"
-                android:gravity="center"
-                android:text="Save"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tilPlanningInfrontSide">
+                android:clickable="false"
+                android:digits="0123456789"
+                android:drawableStart="@drawable/editpencolor"
+                android:drawablePadding="16dp"
+                android:editable="true"
+                android:enabled="true"
+                android:hint="Any Other Remarks"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLeftSide"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_marginn"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tileverapplicable">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLeftSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:digits="0123456789"
+                android:drawableStart="@drawable/editpencolor"
+                android:drawablePadding="16dp"
+                android:editable="true"
+                android:enabled="true"
+                android:hint="Planning in Left Side"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRightSide"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_marginn"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilLeftSide">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtRightSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:digits="0123456789"
+                android:drawableStart="@drawable/editpencolor"
+                android:drawablePadding="16dp"
+                android:editable="true"
+                android:enabled="true"
+                android:hint="Planning in Right Side"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-            </androidx.appcompat.widget.AppCompatButton>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPlanningInfrontSide"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_marginn"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilRightSide">
 
-        </ScrollView>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPlanningInfrontSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:digits="0123456789"
+                android:drawableStart="@drawable/editpencolor"
+                android:drawablePadding="16dp"
+                android:editable="true"
+                android:enabled="true"
+                android:hint="Planning In front Side"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edtbg"
+            android:gravity="center"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilPlanningInfrontSide">
+
+
+        </androidx.appcompat.widget.AppCompatButton>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

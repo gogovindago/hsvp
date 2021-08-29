@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.drawerlayout.widget.DrawerLayout
@@ -21,7 +22,7 @@
                 <com.google.android.material.appbar.AppBarLayout
                     android:id="@+id/appbar"
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
+                    android:layout_height="50dp"
                     android:background="@color/purple_700"
                     app:elevation="2dp">
 
@@ -49,11 +50,11 @@
                                 android:id="@+id/logo"
                                 android:layout_width="120dp"
                                 android:layout_height="30dp"
-                                android:layout_alignLeft="@+id/toolbartxt"
+                                android:layout_alignStart="@+id/toolbartxt"
                                 android:layout_alignParentBottom="true"
-                                android:layout_marginLeft="-130dp"
+                                android:layout_marginStart="-130dp"
                                 android:layout_marginBottom="7dp"
-                                android:layout_toRightOf="@+id/toggle"
+                                android:layout_toEndOf="@+id/toggle"
                                 android:background="@mipmap/ic_launcher_round"
                                 android:visibility="invisible">
 
@@ -67,7 +68,6 @@
                                 android:layout_centerInParent="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="1dp"
-                                android:layout_marginLeft="1dp"
                                 android:fontFamily="@font/roboto_bold"
                                 android:gravity="center"
                                 android:text="@string/home"
