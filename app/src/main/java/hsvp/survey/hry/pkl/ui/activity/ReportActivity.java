@@ -1,5 +1,8 @@
 package hsvp.survey.hry.pkl.ui.activity;
 
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -54,7 +57,7 @@ import java.util.Locale;
 
 import hsvp.survey.hry.pkl.R;
 import hsvp.survey.hry.pkl.apicall.WebAPiCall;
-import hsvp.survey.hry.pkl.databinding.ActivityOldAgeDailyActivitiesBinding;
+import hsvp.survey.hry.pkl.databinding.ActivityReportBinding;
 import hsvp.survey.hry.pkl.utility.BaseActivity;
 import hsvp.survey.hry.pkl.utility.CSPreferences;
 import hsvp.survey.hry.pkl.utility.GlobalClass;
@@ -62,11 +65,8 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
-import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
-
-public class OldAgeDailyActivitiesActivity extends BaseActivity {
-    ActivityOldAgeDailyActivitiesBinding binding;
+public class ReportActivity extends BaseActivity {
+    ActivityReportBinding binding;
 
     String Description, ImageDate, Longitude, Latitude, time, TypeOfVisit,
             accuracyvalue, currentDateandTime, COllegeID, token, User_Id, schemeId,
@@ -99,7 +99,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_old_age_daily_activities);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_report);
         checkpermissions(this);
         checkGPSStatus();
 
@@ -141,7 +141,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
 
 
                     }
-                    Toast.makeText(OldAgeDailyActivitiesActivity.this, checkedRadioButton.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ReportActivity.this, checkedRadioButton.getText(), Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -220,7 +220,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
         } catch (Exception ex) {
         }
         if (!gps_enabled && !network_enabled) {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(OldAgeDailyActivitiesActivity.this);
+            AlertDialog.Builder dialog = new AlertDialog.Builder(ReportActivity.this);
             dialog.setMessage("GPS not enabled");
 
             dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -292,7 +292,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
 
         @Override
         public void onPermissionDenied(ArrayList<String> deniedPermissions) {
-            checkpermissions(OldAgeDailyActivitiesActivity.this);
+            checkpermissions(ReportActivity.this);
 
 
         }
@@ -325,7 +325,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
 //                        break;
                     case 0:
 
-                        checkpermissions(OldAgeDailyActivitiesActivity.this);
+                        checkpermissions(ReportActivity.this);
                         takePhotoFromCameras();
                         break;
                 }
@@ -451,7 +451,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
         binding.txtAdoptedpersondetailedt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(OldAgeDailyActivitiesActivity.this, ModificationInAdoptedPersonDetailActivity.class);
+                Intent i = new Intent(ReportActivity.this, SurveyActivity.class);
                 startActivity(i);
 
             }
@@ -464,7 +464,7 @@ public class OldAgeDailyActivitiesActivity extends BaseActivity {
 
                 if (TypeOfVisit == null || TypeOfVisit.isEmpty()) {
 
-                    GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Visiting Type Missing!", "Please select Visiting Type.");
+                    GlobalClass.dailogError(ReportActivity.this, "Visiting Type Missing!", "Please select Visiting Type.");
                 } else {
 
 
@@ -559,15 +559,13 @@ Document*/
                                 } else {
 
 
-                                try {
-                                    imagefilerequestFile = RequestBody.create(MediaType.parse("multipart/form-data"), "");
-                                    Document = MultipartBody.Part.createFormData("Document", imagefile.getName(), imagefilerequestFile);
-                                } catch (Exception e) {
+                                    try {
+                                        imagefilerequestFile = RequestBody.create(MediaType.parse("multipart/form-data"), "");
+                                        Document = MultipartBody.Part.createFormData("Document", imagefile.getName(), imagefilerequestFile);
+                                    } catch (Exception e) {
 
-                                    e.printStackTrace();
-                                }
-
-
+                                        e.printStackTrace();
+                                    }
 
 
                                 }
@@ -575,10 +573,9 @@ Document*/
                                 MultipartBody.Part imagebodycertificate = null;
 
 
-
-                                if (GlobalClass.isNetworkConnected(OldAgeDailyActivitiesActivity.this)) {
+                                if (GlobalClass.isNetworkConnected(ReportActivity.this)) {
                                     WebAPiCall webapiCall = new WebAPiCall();
-                                    webapiCall.TakecareStep2DataMethod(OldAgeDailyActivitiesActivity.this, OldAgeDailyActivitiesActivity.this, "Bearer " + token,
+                                    webapiCall.TakecareStep2DataMethod(ReportActivity.this, ReportActivity.this, "Bearer " + token,
                                             StudentId,
                                             takecarenodalOfficer_Id,
                                             ProblemFacedByPerson,
@@ -597,11 +594,11 @@ Document*/
 
                                 } else {
 
-                                    Toast.makeText(OldAgeDailyActivitiesActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ReportActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
                                 }
 
 
-                                //  GlobalClass.dailogsuccessWithActivity(OldAgeDailyActivitiesActivity.this, OldAgeDailyActivitiesActivity.this, "Daily Activity Done", "Your Activity submitted successfully.");
+                                //  GlobalClass.dailogsuccessWithActivity(ReportActivity.this, ReportActivity.this, "Daily Activity Done", "Your Activity submitted successfully.");
 
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -662,13 +659,13 @@ Document*/
                                 RequestBody OtherObservation = RequestBody.create(MediaType.parse("multipart/form-data"), anyotherorbservation);
 
 
-                                 RequestBody DateOfVisit = RequestBody.create(MediaType.parse("multipart/form-data"), dateorcontact);
-                               // RequestBody DateOfVisit = RequestBody.create(MediaType.parse("multipart/form-data"), "01/02/2020");
+                                RequestBody DateOfVisit = RequestBody.create(MediaType.parse("multipart/form-data"), dateorcontact);
+                                // RequestBody DateOfVisit = RequestBody.create(MediaType.parse("multipart/form-data"), "01/02/2020");
                                 RequestBody ContactBy_Phone = RequestBody.create(MediaType.parse("multipart/form-data"), ContactByPhone);
                                 RequestBody TypeOf_Visit = RequestBody.create(MediaType.parse("multipart/form-data"), TypeOfVisit);
 
                                 RequestBody uplodingTime = RequestBody.create(MediaType.parse("multipart/form-data"), ImageDate);
-                               // RequestBody uplodingTime = RequestBody.create(MediaType.parse("multipart/form-data"), "11:10");
+                                // RequestBody uplodingTime = RequestBody.create(MediaType.parse("multipart/form-data"), "11:10");
                                 RequestBody Lat = RequestBody.create(MediaType.parse("multipart/form-data"), Latitude);
                                 RequestBody Long = RequestBody.create(MediaType.parse("multipart/form-data"), Longitude);
                                 RequestBody Accuracy = RequestBody.create(MediaType.parse("multipart/form-data"), accuracyvalue);
@@ -677,9 +674,9 @@ Document*/
                                 RequestBody imagefilerequestFile = RequestBody.create(MediaType.parse("multipart/form-data"), imagefile);
                                 MultipartBody.Part imagefilebody = MultipartBody.Part.createFormData("Document", imagefile.getName(), imagefilerequestFile);
 
-                                if (GlobalClass.isNetworkConnected(OldAgeDailyActivitiesActivity.this)) {
+                                if (GlobalClass.isNetworkConnected(ReportActivity.this)) {
                                     WebAPiCall webapiCall = new WebAPiCall();
-                                    webapiCall.TakecareStep2DataMethod(OldAgeDailyActivitiesActivity.this, OldAgeDailyActivitiesActivity.this, "Bearer " + token,
+                                    webapiCall.TakecareStep2DataMethod(ReportActivity.this, ReportActivity.this, "Bearer " + token,
                                             StudentId,
                                             takecarenodalOfficer_Id,
                                             ProblemFacedByPerson,
@@ -698,11 +695,11 @@ Document*/
 
                                 } else {
 
-                                    Toast.makeText(OldAgeDailyActivitiesActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ReportActivity.this, GlobalClass.nointernet, Toast.LENGTH_LONG).show();
                                 }
 
 
-                                //  GlobalClass.dailogsuccessWithActivity(OldAgeDailyActivitiesActivity.this, OldAgeDailyActivitiesActivity.this, "Daily Activity Done", "Your Activity submitted successfully.");
+                                //  GlobalClass.dailogsuccessWithActivity(ReportActivity.this, ReportActivity.this, "Daily Activity Done", "Your Activity submitted successfully.");
 
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -740,7 +737,7 @@ Document*/
                 int mDay = c.get(Calendar.DAY_OF_MONTH);
 
 
-                DatePickerDialog datePickerDialog = new DatePickerDialog(OldAgeDailyActivitiesActivity.this,
+                DatePickerDialog datePickerDialog = new DatePickerDialog(ReportActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
 
                             @Override
@@ -775,30 +772,30 @@ Document*/
     public boolean Check_Data(View view) {
 
         if (TextUtils.isEmpty(binding.edtproblemfaced.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "problems Missing!", "Please type problems you are facing.");
+            GlobalClass.dailogError(ReportActivity.this, "problems Missing!", "Please type problems you are facing.");
 
             return false;
         } else if (TextUtils.isEmpty(binding.edtsolutions.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Solution provided by student Missing!", "Please type solution provided by student.");
+            GlobalClass.dailogError(ReportActivity.this, "Solution provided by student Missing!", "Please type solution provided by student.");
 
             return false;
 
         } /*else if (TextUtils.isEmpty(binding.edtrequiredment.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Requirement of person/orphans Missing!", "Please type solution provided by student.");
+            GlobalClass.dailogError(ReportActivity.this, "Requirement of person/orphans Missing!", "Please type solution provided by student.");
 
             return false;
 
         }*/ else if (TextUtils.isEmpty(binding.edtdateorcontact.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Visited date Missing!", "Please select date on which you visited.");
+            GlobalClass.dailogError(ReportActivity.this, "Visited date Missing!", "Please select date on which you visited.");
 
             return false;
 
         } else if (imagefile == null) {
             // myLoaders.showSnackBar(view, "Please Enter Password");
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Image Missing!", "Please take a picture of your Activities.");
+            GlobalClass.dailogError(ReportActivity.this, "Image Missing!", "Please take a picture of your Activities.");
             return false;
         } else if (binding.lat.getText().toString().trim().isEmpty() && binding.longitude.getText().toString().trim().isEmpty()) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Location of your Activity is  Missing!", "Please make sure gps or location is Enable / ON of phone to get plant location.");
+            GlobalClass.dailogError(ReportActivity.this, "Location of your Activity is  Missing!", "Please make sure gps or location is Enable / ON of phone to get plant location.");
 
             return false;
 
@@ -809,35 +806,36 @@ Document*/
     public boolean Check_Dataforphone(View view) {
 
         if (TextUtils.isEmpty(binding.edtproblemfaced.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "problems Missing!", "Please type problems you are facing.");
+            GlobalClass.dailogError(ReportActivity.this, "problems Missing!", "Please type problems you are facing.");
 
             return false;
         } else if (TextUtils.isEmpty(binding.edtsolutions.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Solution provided by student Missing!", "Please type solution provided by student.");
+            GlobalClass.dailogError(ReportActivity.this, "Solution provided by student Missing!", "Please type solution provided by student.");
 
             return false;
 
         } /*else if (TextUtils.isEmpty(binding.edtrequiredment.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Requirement of person/orphans Missing!", "Please type solution provided by student.");
+            GlobalClass.dailogError(ReportActivity.this, "Requirement of person/orphans Missing!", "Please type solution provided by student.");
 
             return false;
 
         }*/ else if (TextUtils.isEmpty(binding.edtdateorcontact.getText().toString().trim())) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Visited date Missing!", "Please select date on which you visited.");
+            GlobalClass.dailogError(ReportActivity.this, "Visited date Missing!", "Please select date on which you visited.");
 
             return false;
 
         }/* else if (imagefile == null) {
             // myLoaders.showSnackBar(view, "Please Enter Password");
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Image Missing!", "Please take a picture of your Activities.");
+            GlobalClass.dailogError(ReportActivity.this, "Image Missing!", "Please take a picture of your Activities.");
             return false;
         } else if (binding.lat.getText().toString().trim().isEmpty() && binding.longitude.getText().toString().trim().isEmpty()) {
-            GlobalClass.dailogError(OldAgeDailyActivitiesActivity.this, "Location of your Activity is  Missing!", "Please make sure gps or location is Enable / ON of phone to get plant location.");
+            GlobalClass.dailogError(ReportActivity.this, "Location of your Activity is  Missing!", "Please make sure gps or location is Enable / ON of phone to get plant location.");
 
             return false;
 
         }*/
         return true;
     }
+
 
 }

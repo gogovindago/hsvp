@@ -12,9 +12,17 @@
         <entry key="..\:/hsvp/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/hsvp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/hsvp/app/src/main/res/layout/activity_modification_in_adopted_person_detail.xml" value="0.33" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_notification_detail.xml" value="0.19010416666666666" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_notifications.xml" value="0.19010416666666666" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_old_age_daily_activities.xml" value="0.19010416666666666" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_profile.xml" value="0.19010416666666666" />
         <entry key="..\:/hsvp/app/src/main/res/layout/activity_registration_new.xml" value="0.19010416666666666" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_report.xml" value="0.19010416666666666" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_reset_password.xml" value="0.19010416666666666" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_search.xml" value="0.19010416666666666" />
         <entry key="..\:/hsvp/app/src/main/res/layout/activity_student_record.xml" value="0.19010416666666666" />
-        <entry key="..\:/hsvp/app/src/main/res/layout/activity_survey.xml" value="0.22" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_survey.xml" value="0.10126582278481013" />
+        <entry key="..\:/hsvp/app/src/main/res/layout/activity_viewalldata.xml" value="0.19010416666666666" />
         <entry key="..\:/hsvp/app/src/main/res/layout/list_view_item_row.xml" value="0.18177083333333333" />
         <entry key="..\:/hsvp/app/src/main/res/layout/list_view_link_hearingspeechitem_row.xml" value="0.18177083333333333" />
         <entry key="..\:/hsvp/app/src/main/res/layout/notification_row.xml" value="0.18177083333333333" />

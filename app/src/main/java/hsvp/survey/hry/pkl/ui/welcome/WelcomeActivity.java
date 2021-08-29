@@ -12,12 +12,10 @@ import java.util.ArrayList;
 
 import hsvp.survey.hry.pkl.R;
 import hsvp.survey.hry.pkl.adapter.SpinnerLanguageAdapter;
-
 import hsvp.survey.hry.pkl.databinding.ActivityWelcomeBinding;
 import hsvp.survey.hry.pkl.models.LanguageModelData;
 import hsvp.survey.hry.pkl.ui.activity.LoginActivity;
 import hsvp.survey.hry.pkl.ui.activity.MainActivity;
-import hsvp.survey.hry.pkl.ui.activity.RegistrationNewActivity;
 import hsvp.survey.hry.pkl.utility.BaseActivity;
 import hsvp.survey.hry.pkl.utility.CSPreferences;
 
@@ -99,9 +97,9 @@ public class WelcomeActivity extends BaseActivity implements AdapterView.OnItemS
                 //Intent intentsignup = new Intent(WelcomeActivity.this, SignupActivityold.class);
                // Intent intentsignup = new Intent(WelcomeActivity.this, SignupActivity.class);
                // Intent intentsignup = new Intent(WelcomeActivity.this, RegistrationActivity.class);
-                Intent intentsignup = new Intent(WelcomeActivity.this, RegistrationNewActivity.class);
-                startActivity(intentsignup);
-                finish();
+//                Intent intentsignup = new Intent(WelcomeActivity.this, RegistrationNewActivity.class);
+//                startActivity(intentsignup);
+//                finish();
 
             }
         });

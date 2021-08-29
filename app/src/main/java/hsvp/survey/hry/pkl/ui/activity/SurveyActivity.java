@@ -1,5 +1,6 @@
 package hsvp.survey.hry.pkl.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -27,10 +28,18 @@ public class SurveyActivity extends BaseActivity {
 
     @Override
     public void initListeners() {
+
         binding.toolbar.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+        binding.btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SurveyActivity.this, ReportActivity.class);
+                startActivity(i);
             }
         });
 

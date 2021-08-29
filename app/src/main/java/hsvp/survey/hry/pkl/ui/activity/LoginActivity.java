@@ -94,9 +94,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
             public void onClick(View v) {
                 // Intent i = new Intent(LoginActivity.this, SignupActivity.class);
                 //Intent i = new Intent(LoginActivity.this, RegistrationActivity.class);
-                Intent i = new Intent(LoginActivity.this, RegistrationNewActivity.class);
-                startActivity(i);
-                finish();
+//                Intent i = new Intent(LoginActivity.this, RegistrationNewActivity.class);
+//                startActivity(i);
+//                finish();
 
             }
         });

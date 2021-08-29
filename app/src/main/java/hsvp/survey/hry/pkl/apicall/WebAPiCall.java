@@ -79,11 +79,9 @@ import hsvp.survey.hry.pkl.models.VerifiedStudentResponse;
 import hsvp.survey.hry.pkl.models.VerifyOtpRequest;
 import hsvp.survey.hry.pkl.models.VerifyOtpResponse;
 import hsvp.survey.hry.pkl.retrofitinterface.ApiClient;
-import hsvp.survey.hry.pkl.ui.activity.AdoptionDailyActivitiesActivity;
 import hsvp.survey.hry.pkl.ui.activity.LoginActivity;
 import hsvp.survey.hry.pkl.ui.activity.MainActivity;
-import hsvp.survey.hry.pkl.ui.activity.OldAgeDailyActivitiesActivity;
-import hsvp.survey.hry.pkl.ui.activity.RuralOldAgedDailyActivitiesActivity;
+import hsvp.survey.hry.pkl.ui.activity.SurveyActivity;
 import hsvp.survey.hry.pkl.utility.CSPreferences;
 import hsvp.survey.hry.pkl.utility.GlobalClass;
 import okhttp3.MultipartBody;
@@ -178,7 +176,7 @@ public class WebAPiCall {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
-                Intent i = new Intent(activity, OldAgeDailyActivitiesActivity.class);
+                Intent i = new Intent(activity, SurveyActivity.class);
                 activity.startActivity(i);
                 activity.finish();
             }
@@ -231,7 +229,7 @@ public class WebAPiCall {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
-                Intent i = new Intent(activity, RuralOldAgedDailyActivitiesActivity.class);
+                Intent i = new Intent(activity, SurveyActivity.class);
                 activity.startActivity(i);
                 activity.finish();
             }
@@ -337,7 +335,7 @@ public class WebAPiCall {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
-                Intent i = new Intent(activity, AdoptionDailyActivitiesActivity.class);
+                Intent i = new Intent(activity, SurveyActivity.class);
                 activity.startActivity(i);
                 activity.finish();
             }

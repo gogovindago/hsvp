@@ -24,61 +24,25 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".ui.activity.SurveyActivity"
+
             android:screenOrientation="portrait"
             android:theme="@style/sauhardam"
             android:windowSoftInputMode="stateAlwaysHidden"
+            android:name=".ui.activity.ReportActivity"
             android:exported="true" />
+        <activity
+            android:name=".ui.activity.SurveyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/sauhardam"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".ui.activity.NssGalleryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/sauhardam"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".ui.activity.SchemeChangeForStudentActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.StudentVerificationListActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
             android:name=".ui.activity.adminDashboardActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.NodalSchemTypeListActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.ModificationInAdoptedPersonDetailActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.ViewSelfDailyReportByStudentActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.StudentDailyActivityDetailActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.StudentRecordActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.OldAgeDailyActivitiesActivity"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.OldAgeTakeCareStep1Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.RegistrationNewActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/sauhardam"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
@@ -134,46 +98,6 @@
             android:name=".ui.activity.ProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/sauhardam" />
-        <activity
-            android:name=".ui.activity.AdoptionOfLibStep1Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.AdoptionDailyActivitiesActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.RuralOldAgedDailyActivitiesActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.RuralOldAgedStep1Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.StudentDailyActivityListActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.NodalSchemeTypeListForVerificationActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.StudentVerifiedListForNodalActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".ui.activity.SchemeChangeRequestListForNodalOfficerActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/sauhardam"
-            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".ui.activity.ResetPasswordActivity"
             android:screenOrientation="portrait"

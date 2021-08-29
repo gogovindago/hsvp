@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.activity.RuralOldAgedDailyActivitiesActivity">
+        tools:context=".ui.activity.ReportActivity">
 
         <include
             android:id="@+id/toolbar"
@@ -34,6 +38,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
+
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                         android:layout_width="match_parent"
@@ -46,7 +51,7 @@
                         android:textColorHint="@color/black">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/edtproblemfacedrural"
+                            android:id="@+id/edtproblemfaced"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableStart="@drawable/editpencolor"
@@ -95,6 +100,34 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_horizontal_marginn"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:outlineSpotShadowColor="@color/black"
+                        android:textColorHint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/edtrequiredment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/editpencolor"
+                            android:drawableLeft="@drawable/editpencolor"
+                            android:drawablePadding="16dp"
+                            android:hint="Requirement of persons / orphans"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -108,7 +141,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                     </TextView>
 
@@ -120,7 +153,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/spinner_border"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <RadioGroup
                             android:id="@+id/btnRadiogroup"
@@ -147,7 +180,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="0dp"
-                                android:text="Visiting over Phone"
+                                android:text="Contacting by Phone"
                                 android:textAllCaps="false"
                                 android:textStyle="normal"
                                 android:visibility="visible">
@@ -181,7 +214,7 @@
                             android:drawableLeft="@drawable/courseyear"
                             android:drawablePadding="16dp"
                             android:focusable="false"
-                            android:hint="Date of Visit / contact by phone"
+                            android:hint="Date of  Visit / contacting by phone"
                             android:imeOptions="actionNext"
                             android:inputType="textPersonName"
                             android:outlineSpotShadowColor="@color/colorAccent"
@@ -193,56 +226,27 @@
                             app:passwordToggleEnabled="true" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-
                     <com.google.android.material.textfield.TextInputLayout
+                        android:visibility="gone"
+                        android:id="@+id/tlactivitiesOrganized"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/activity_horizontal_marginn"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:outlineSpotShadowColor="@color/black"
-                        android:textColorHint="@color/black">
-
-                        <com.google.android.material.textfield.TextInputEditText
-
-                            android:id="@+id/edtrequiredment"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/editpencolor"
-                            android:drawableLeft="@drawable/editpencolor"
-                            android:drawablePadding="16dp"
-                            android:hint="Requirement of persons / orphans"
-                            android:imeOptions="actionNext"
-                            android:inputType="textPersonName"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/activity_horizontal_marginn"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="8dp"
                         android:outlineSpotShadowColor="@color/colorAccent"
                         android:textColorHint="@color/black">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/edtruralprogorg"
+                            android:id="@+id/edtactivitiesOrganized"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/editpencolor"
-                            android:drawableLeft="@drawable/editpencolor"
+                            android:drawableStart="@drawable/ic_baseline_attach_file_24"
+                            android:drawableLeft="@drawable/ic_baseline_attach_file_24"
                             android:drawablePadding="16dp"
-                            android:hint="Activity organized"
+                            android:hint="Activities organized with photographs"
                             android:imeOptions="actionNext"
                             android:inputType="textPersonName"
                             android:outlineSpotShadowColor="@color/colorAccent"
@@ -255,6 +259,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <androidx.cardview.widget.CardView
+                        android:visibility="gone"
                         android:id="@+id/cardview"
                         android:layout_width="250dp"
                         android:layout_height="250dp"
@@ -389,7 +394,7 @@
                         android:textColorHint="@color/black">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/edtruralotheractivityorg"
+                            android:id="@+id/edtotherorbservation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableStart="@drawable/editpencolor"
@@ -408,6 +413,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:visibility="gone"
                         android:id="@+id/txt_adoptedpersondetailedt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -415,14 +421,12 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="@string/click_here_to_change_adopted_person_detail"
-                        android:textColor="@color/warning_stroke_color"
-                        android:visibility="gone" />
-
+                        android:textColor="@color/warning_stroke_color" />
 
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_ruralsubmit"
+                    android:id="@+id/btn_submit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -446,4 +450,3 @@
     </LinearLayout>
 
 </layout>
-

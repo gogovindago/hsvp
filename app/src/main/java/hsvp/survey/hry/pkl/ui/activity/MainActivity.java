@@ -573,23 +573,16 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
                 startActivity(Intent.createChooser(shareIntent, "Share via"));
 
                 break;
-            case 44:
 
-                mDrawerLayout.closeDrawers();
-
-
-                Intent NodalSchemTypeListActivity = new Intent(this, NodalSchemTypeListActivity.class);
-                startActivity(NodalSchemTypeListActivity);
-                break;
 
             case 444:
 
                 mDrawerLayout.closeDrawers();
 
-
-                Intent schemechange = new Intent(this, SchemeChangeForStudentActivity.class);
-                startActivity(schemechange);
-                break;
+//
+//                Intent schemechange = new Intent(this, SchemeChangeForStudentActivity.class);
+//                startActivity(schemechange);
+//                break;
 
             case 999:
 
@@ -733,140 +726,7 @@ public class MainActivity extends BaseActivity implements OptionsAdapter.ItemLis
 
 
 
-        } else if (item.Id == 3) {
 
-
-            if (CSPreferences.readString(this, "LibrariesAdoptionStep1").equalsIgnoreCase("N")) {
-                Intent intent = new Intent(this, AdoptionOfLibStep1Activity.class);
-                intent.putExtra("schemeId", "2");
-
-                startActivity(intent);
-
-            } else {
-
-
-                Intent intent = new Intent(this, AdoptionOfLibStep1Activity.class);//AdoptionDailyActivitiesActivity
-                intent.putExtra("schemeId", "2");
-
-                startActivity(intent);
-            }
-
-
-        } else if (item.Id == 4) {
-
-
-            if (CSPreferences.readString(this, "RuralTakeCareStep1").equalsIgnoreCase("N")) {
-                Intent intent = new Intent(this, RuralOldAgedStep1Activity.class);
-                intent.putExtra("schemeId", "3");
-
-                startActivity(intent);
-
-            } else {
-
-
-                Intent intent = new Intent(this, RuralOldAgedStep1Activity.class);// RuralOldAgedDailyActivitiesActivity
-                intent.putExtra("schemeId", "3");
-
-                startActivity(intent);
-            }
-
-
-        } else if (item.Id == 44) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            Intent captureplant = new Intent(this, NodalSchemTypeListActivity.class);//NodalSchemTypeListActivity  ViewSelfDailyReportByStudentActivity
-            startActivity(captureplant);
-
-        } else if (item.Id == 202) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            Intent captureplant = new Intent(this, adminDashboardActivity.class);//NodalSchemTypeListActivity  ViewSelfDailyReportByStudentActivity
-            startActivity(captureplant);
-
-        } else if (item.Id == 222) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            Intent captureplant = new Intent(this, NodalSchemeTypeListForVerificationActivity.class);//NodalSchemTypeListActivity  ViewSelfDailyReportByStudentActivity
-            captureplant.putExtra("studentStatus", "222");
-            startActivity(captureplant);
-
-        } else if (item.Id == 333) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            Intent captureplant = new Intent(this, NodalSchemeTypeListForVerificationActivity.class);//NodalSchemTypeListActivity  ViewSelfDailyReportByStudentActivity
-            captureplant.putExtra("studentStatus", "333");
-            startActivity(captureplant);
-
-        } else if (item.Id == 334) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            Intent captureplant = new Intent(this, SchemeChangeRequestListForNodalOfficerActivity.class);//NodalSchemTypeListActivity  ViewSelfDailyReportByStudentActivity
-            captureplant.putExtra("studentStatus", "334");
-            startActivity(captureplant);
-
-        }    /*else if (currposition == 5) {
-
-            Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-//            Intent captureplant = new Intent(this, CapturePlantationActivity.class);
-//            startActivity(captureplant);
-
-        } else if (currposition == 6) {
-
-            Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-//            Intent captureplant = new Intent(this, CapturePlantationActivity.class);
-//            startActivity(captureplant);
-
-        } else if (currposition == 7) {
-
-            Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-//            Intent captureplant = new Intent(this, CapturePlantationActivity.class);
-//            startActivity(captureplant);
-
-        } else if (currposition == 8) {
-
-            Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-//            Intent captureplant = new Intent(this, CapturePlantationActivity.class);
-//            startActivity(captureplant);
-
-        } else if (currposition == 9) {
-
-            Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-//            Intent captureplant = new Intent(this, CapturePlantationActivity.class);
-//            startActivity(captureplant);
-
-        } else if (currposition == 10) {
-
-            Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            Intent captureplant = new Intent(this, AssignmentListingActivity.class);
-            startActivity(captureplant);
-
-        } else if (currposition == 11) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            mDrawerLayout.closeDrawers();
-            Intent notification = new Intent(this, GalleryActivity.class);
-            startActivity(notification);
-        } else if (currposition == 12) {
-
-            // Toast.makeText(getApplicationContext(), item.text + " is clicked", Toast.LENGTH_SHORT).show();
-
-            mDrawerLayout.closeDrawers();
-            Intent notification = new Intent(this, ApplyLeavesTypesActivity.class);
-            startActivity(notification);
-        } */ else {
-            Toast.makeText(getApplicationContext(), " Nothing to clicked", Toast.LENGTH_SHORT).show();
 
         }
 
